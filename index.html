@@ -1,55 +1,24 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="logo.png" type="image/svg+xml">
-    <title>To Do List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  </head>
-  <body><a href="#" class="logo"><img src="logo1.png" width="200" height="50" align="left"></a>
-  <div class="bg">
-  
-    <div class="container">
-      <input type="text" class="txtb" placeholder="Add a task">
-      <div class="notcomp">
-        <h3>Not Completed</h3>
-      </div>
+<html>
 
-      <div class="comp">
-        <h3>Completed</h3>
-      </div>
-    </div>
-</div>
+<head>
+		<link type="text/css" rel="stylesheet"
+		    href="style.css"/>
+</head>
 
-    <script type="text/javascript">
-      $(".txtb").on("keyup",function(e){
-        if(e.keyCode == 13 && $(".txtb").val() != "")
-        {
-          var task = $("<div class='task'></div>").text($(".txtb").val());
-          var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
-            var p = $(this).parent();
-            p.fadeOut(function(){
-              p.remove();
-            });
-          });
+<body >
 
-          var check = $("<i class='fas fa-check'></i>").click(function(){
-            var p = $(this).parent();
-            p.fadeOut(function(){
-              $(".comp").append(p);
-              p.fadeIn();
-            });
-            $(this).remove();
-          });
+	
+	<iframe name="title" srcdoc="<Center><H1>Bansal College of Engineering,Mandideep</Center></h1>" width="100%" height="60" scrolling="no"></iframe>
+	<iframe name="headerFrame" src="menu.html"
+		width="100%" height="200"></iframe>
+	
+	<iframe name="ContentFrame" height="500" width="100%" src="bce.jpg" >
+	</iframe>
+	<iframe name="footerframe" src="footer.html" width="100%">
+	</iframe>
 
-          task.append(del,check);
-          $(".notcomp").append(task);
-            //to clear the input
-          $(".txtb").val("");
-        }
-      });
-    </script>
-  </body>
+	
+
+</body
+
 </html>
